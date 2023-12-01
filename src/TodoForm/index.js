@@ -26,7 +26,7 @@ function TodoForm () {
         <form onSubmit={onSubmit}>
             <label>Escribe tu nuevo TODO </label>
             <textarea 
-                placeholder="Transferirle a Martha el saldo pendiente"
+                placeholder="Transferir el saldo pendiente"
                 value={newTodoValue}
                 onChange={onChange}
                 required
