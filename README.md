@@ -73,3 +73,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Principios de diseño en React
+
+Filosofía React para el Team Facebook
+
+Framework o librería
+- Abstracciones comunes
+- Interoperabilidad
+
+Cambios al core
+- Estabilidad
+- Válvulas de escape
+- Experiencia de desarrollo
+
+Prioridades
+- Implementación
+- Optimizado para instrumentación
+- Dogfooding
+
+Filosofía para ti
+
+Trabajo de React
+- Planificación
+- Configuración
+
+Tu trabajo
+- Depuración
+- Composición
