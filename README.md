@@ -101,3 +101,34 @@ Trabajo de React
 Tu trabajo
 - Depuración
 - Composición
+
+Composición de componentes
+
+Colocación de estado
+
+¿Dónde va tu estado?
+- Máxima cercanía a la relevancia
+- Stateful vs. Stateless
+
+De lo general a lo específico
+
+- App
+-- TodoHeader
+---- TodoCounter
+---- TodoSearch
+-- TodoList
+---- TodoItem
+
+Se transforma en
+
+- App
+-- TodoHeaderUI
+---- TodoCounterUI
+---- TodoSearch
+------ TodoInputUI
+
+-- TodoListUI
+---- TodoItem
+------ TodoItemUI
+
+¿Necesitas React Context? (Tal vez no)
