@@ -22,3 +22,7 @@
 .TodoSearch:focus {
     outline-color: #DAFFFB;
 }
+
+.TodoSearch:disabled {
+    opacity: 25%;
+}

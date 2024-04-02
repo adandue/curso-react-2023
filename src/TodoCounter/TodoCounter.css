@@ -10,3 +10,7 @@
     font-weight: bold;
     color: #64CCC5;
 }
+
+.TodoCounter--loading {
+    opacity: 25%;
+}
