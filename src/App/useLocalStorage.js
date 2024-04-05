@@ -1,57 +1,55 @@
-import React from "react";
+import React from 'react';
 
 function useLocalStorage(itemName, initialValue) {
-    const [item, setItem] =React.useState(initialValue);
-    const [loading, setLoading] =React.useState(true);
-    const [error, setError] =React.useState(false);
+    const [sincronizedItem, setSincronizedItem] = React.useState(true);
+    const [error, setError] = React.useState(false);
+    const [loading, setLoading] = React.useState(true);
+    const [item, setItem] = React.useState(initialValue);
 
-
-    
     React.useEffect(() => {
-        setTimeout(() => {
+    setTimeout(() => {
         try {
-            const localStorageItem = localStorage.getItem(itemName);
+        const localStorageItem = localStorage.getItem(itemName);
+        let parsedItem;
         
-            let parsedItem;
-    
-            if (!localStorageItem) {
-                localStorage.setItem(itemName, JSON.stringify(initialValue));
-                parsedItem = initialValue;
-            } else {
-                parsedItem = JSON.parse(localStorageItem);
-                setItem(parsedItem);
-            }
-    
-            setLoading(false);
-        } catch(error) {
-            setLoading(false);
-            setError(true);
+        if (!localStorageItem) {
+            localStorage.setItem(itemName, JSON.stringify(initialValue));
+            parsedItem = initialValue;
+        } else {
+            parsedItem = JSON.parse(localStorageItem);
         }
-        }, 2000);
-    }, []);
 
-    const saveItem = (newItem) => { 
-        let stringifyNewTodos = JSON.stringify(newItem);
-        localStorage.setItem(itemName, stringifyNewTodos);
+        setItem(parsedItem);
+        setLoading(false);
+        setSincronizedItem(true);
+        } catch(error) {
+        setError(error);
+        }
+    }, 3000);
+    }, [sincronizedItem]);
+
+    const saveItem = (newItem) => {
+    try {
+        const stringifiedItem = JSON.stringify(newItem);
+        localStorage.setItem(itemName, stringifiedItem);
         setItem(newItem);
+    } catch(error) {
+        setError(error);
+    }
+    };
+
+    const sincronizeItem = () => {
+    setLoading(true);
+    setSincronizedItem(false);
     };
 
     return {
-        item, 
-        saveItem, 
-        loading, 
-        error,
+    item,
+    saveItem,
+    loading,
+    error,
+    sincronizeItem,
     };
 }
 
 export { useLocalStorage };
-
-// localStorage.removeItem('TODOS_V1');
-// const defaultTodos = [
-//   { text: 'Publicar Traxcavos en facebook', completed: true },
-//   { text: 'Tomar el Curso de Intro a React.js', completed: false },
-//   { text: 'Transferirle a Martha', completed: true },
-//   { text: 'Checar fecha de entrega de Yeso Agrícola', completed: false },
-// ];
-
-// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
