@@ -27,7 +27,7 @@ function App() {
     searchValue,
     setSearchValue,
     addTodo,
-    sincronizeTodos,
+    synchronizeTodos
   } = useTodos();
   
   return (
@@ -81,7 +81,7 @@ function App() {
       />
 
       <ChangeAlertWithStorageListener
-        sincronize={sincronizeTodos}
+        synchronize={synchronizeTodos}
       />
     </React.Fragment>
   );
