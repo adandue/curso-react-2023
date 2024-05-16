@@ -9,21 +9,29 @@ function useTodos () {
         loading,
         error,
     } = useLocalStorage('TODOS_V1', []);
+
     const [searchValue, setSearchValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(false);
     
     const completedTodos = todos.filter(
         todo => !!todo.completed
         ).length;
+    
     const totalTodos = todos.length;
     
-    const searchedTodos = todos.filter(
+    let searchedTodos = []
+
+    if(!searchValue.length >= 1) {
+        searchedTodos = todos
+    } else {
+        searchedTodos = todos.filter(
         (todo) => {
         const todoText = todo.text.toLowerCase();
         const searchText = searchValue.toLowerCase();
         return todoText.includes(searchText);
-        }
-    );
+        });
+    }
+
     
     const addTodo = (text) => {
         const newTodos = [...todos];
