@@ -32,7 +32,7 @@ const onSynchronize = () => dispatch({ type: actionTypes.synchronize })
         } catch(error) {
             onError(error);
         }
-    }, 3000);
+    }, 1000);
     }, [synchronizedItem]);
 
     const saveItem = (newItem) => {
