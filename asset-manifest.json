@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/curso-react-2023/static/css/main.c91fdeb8.css",
-    "main.js": "/curso-react-2023/static/js/main.39bdced5.js",
+    "main.css": "/curso-react-2023/static/css/main.5e8528d1.css",
+    "main.js": "/curso-react-2023/static/js/main.8ad2374c.js",
     "index.html": "/curso-react-2023/index.html",
     "static/media/delete.svg": "/curso-react-2023/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
     "static/media/check.svg": "/curso-react-2023/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
-    "main.c91fdeb8.css.map": "/curso-react-2023/static/css/main.c91fdeb8.css.map",
-    "main.39bdced5.js.map": "/curso-react-2023/static/js/main.39bdced5.js.map"
+    "static/media/edit.svg": "/curso-react-2023/static/media/edit.b7ce5b15614c388aa3d8c3c92d976d83.svg",
+    "main.5e8528d1.css.map": "/curso-react-2023/static/css/main.5e8528d1.css.map",
+    "main.8ad2374c.js.map": "/curso-react-2023/static/js/main.8ad2374c.js.map"
   },
   "entrypoints": [
-    "static/css/main.c91fdeb8.css",
-    "static/js/main.39bdced5.js"
+    "static/css/main.5e8528d1.css",
+    "static/js/main.8ad2374c.js"
   ]
 }
